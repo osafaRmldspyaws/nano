@@ -11802,7 +11802,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[28]:</div>
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Import libraries necessary for this project</span>
@@ -11909,7 +11909,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[30]:</div>
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
@@ -11932,7 +11932,7 @@ div#notebook {
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[30]:</div>
+<div class="prompt output_prompt">Out[3]:</div>
 
 
 
@@ -11949,7 +11949,40 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[31]:</div>
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;MEDV&#39;</span><span class="p">])</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[10]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>pandas.core.series.Series</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Separate out the features and prices from the dataFrame</span>
@@ -11960,27 +11993,32 @@ div#notebook {
 
 <span class="c1"># TODO: Minimum price of the data</span>
 <span class="c1">#minimum_price = None</span>
-<span class="n">minimum_price</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;MEDV&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">min</span><span class="p">()</span>
+<span class="c1">#minimum_price = data[&#39;MEDV&#39;].min()</span>
+<span class="n">minimum_price</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;MEDV&#39;</span><span class="p">])</span>
 
 <span class="c1"># TODO: Maximum price of the data</span>
 <span class="c1">#maximum_price = None</span>
-<span class="n">maximum_price</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;MEDV&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">()</span>
+<span class="c1">#maximum_price = data[&#39;MEDV&#39;].max()</span>
+<span class="n">maximum_price</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;MEDV&#39;</span><span class="p">])</span>
 
 <span class="c1"># TODO: Mean price of the data</span>
-<span class="n">mean_price</span> <span class="o">=</span> <span class="kc">None</span><span class="c1">#</span>
-<span class="n">mean_price</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;MEDV&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+<span class="c1">#mean_price = None#</span>
+<span class="c1">#mean_price = data[&#39;MEDV&#39;].mean()</span>
+<span class="n">mean_price</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;MEDV&#39;</span><span class="p">])</span>
 
 <span class="c1"># TODO: Median price of the data</span>
 <span class="c1">#median_price = None</span>
-<span class="n">median_price</span> <span class="o">=</span> <span class="n">st</span><span class="o">.</span><span class="n">median</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;MEDV&#39;</span><span class="p">])</span>
+<span class="n">median_price</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">median</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;MEDV&#39;</span><span class="p">])</span>
 
 <span class="c1"># TODO: Standard deviation of prices of the data</span>
 <span class="c1">#std_price = None</span>
-<span class="n">std_price</span> <span class="o">=</span> <span class="n">st</span><span class="o">.</span><span class="n">stdev</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;MEDV&#39;</span><span class="p">])</span>
+<span class="n">std_price</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;MEDV&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">std</span><span class="p">()</span>
+<span class="c1">#used the pandas std-deviation as it takes into consideration the degree of freedom while calculating std for samples </span>
 
 <span class="c1"># Show the calculated statistics</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Statistics for Boston housing dataset:</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Minimum price: $</span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">minimum_price</span><span class="p">))</span> 
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Minimum price_1: $</span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">minimum_price_1</span><span class="p">))</span> 
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Maximum price: $</span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">maximum_price</span><span class="p">))</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Mean price: $</span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">mean_price</span><span class="p">))</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Median price $</span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">median_price</span><span class="p">))</span>
@@ -12004,10 +12042,11 @@ div#notebook {
 <pre>Statistics for Boston housing dataset:
 
 Minimum price: $105000.0
+Minimum price_1: $105000.0
 Maximum price: $1024800.0
 Mean price: $454342.9447852761
 Median price $438900.0
-Standard deviation of prices: $165340.27765266784
+Standard deviation of prices: $165340.27765266786
 </pre>
 </div>
 </div>
@@ -12314,10 +12353,17 @@ Standard deviation of prices: $165340.27765266784
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Answer: </strong>
+    ''' #Pevius answer
     The division of data helps to train the model progressively and continuously verify against the
     smaller cross-validation sets before finally juding against the test_set. So , initially we start
     minimizing the underfit(high bias) by progressively training and then finally evaluating on an
-    unseen data thereby assessing if it has not reached a point of overfit(high variance).</p>
+    unseen data thereby assessing if it has not reached a point of overfit(high variance).
+    '''</p>
+
+<pre><code>'''New Answer
+The primary reason for train/test split of data is to ward-off the problem of overfit(high variance).
+The ideal situation or the expected output from model is for it to genralize the pattern within the data and memorize the data itself. Hence , the accuracy on a training model cannot be trusted until it has been tested on an unseen data(testing set).
+Another point to mention is , since we always work on samples rather than population we tend to (i am stressing tend-to) have some limitation on the sample sets hence , proper utilization is acheived with train-test and k-fold cross-validation.</code></pre>
 
 </div>
 </div>
@@ -14291,10 +14337,48 @@ Predicted selling price for Client 3&#39;s home: $892,850.00
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Answer: </strong> The prices recommended are as per the predicted prices of our model.</p>
 
-<pre><code>         They seem to be resonable in comparioson to our exploratory data analysis.</code></pre>
+<pre><code>         They seem to be resonable in comparioson to our exploratory data analysis.
+
+         In comparison to the EDA conducted initially :
+            In terms of number of rooms, the expectation is that price of the house will go up as
+            the num_rooms increase however the bearance of poverty_level and student_teacher
+            has a much higher on the overall price as compared to no_of_rooms. This is
+            cleary evident from the data and so do the model where houses of same size(based of
+            no_of_rooms ; for eample the index no 353 &amp; 355 ); where houses are of 3.5 rooms and
+            student_teacher ratio of 20 but because poverty_rate is higher for 355th hence the
+            price is lower. Again there are exceptions to this pattern(outliers) but in general
+            this is the trend. So , the poverty has a negetive correlation(not causal) with price.
+
+            In case of students_teacher ratio, as this figure is low , individual attention
+            for each student is higher, thereby better service, hence more cost.(e.g; the data at
+            index 372 and 479 where no_of_rooms are almost same 5.3 and poverty_rate also almost
+            equal ) but a slight difference in student_teacher ratio has caused a difference of 
+            71% in price.
+
+            To conclusively state the results we see that poverty_rate and student_teacher ratio
+            for 3rd client is way less than others which explains the value of his property.
+            Client 2 having smallest house(least number of rooms among the 3) and higher
+            proverty_rate and student_teacher ratio clearly depicts his property being lowest
+            valued.
+
+            Hence, the client 1's price is obvious from the above two explanations.</code></pre>
 
 </div>
 </div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[26]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#data.columns</span>
+<span class="c1">#data.sort_values(&#39;RM&#39;)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
